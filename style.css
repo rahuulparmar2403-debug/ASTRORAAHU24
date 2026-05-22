@@ -1,0 +1,172 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#050816;
+  color:white;
+  overflow-x:hidden;
+  position:relative;
+}
+
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:
+    radial-gradient(white 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:0.15;
+  z-index:-1;
+  animation:moveStars 20s linear infinite;
+}
+
+@keyframes moveStars{
+  from{
+    transform:translateY(0px);
+  }
+  to{
+    transform:translateY(-200px);
+  }
+}
+
+.hero{
+  text-align:center;
+  padding:60px 20px 30px;
+}
+
+h1{
+  font-size:4rem;
+  color:#ffd700;
+  text-shadow:0 0 20px #ffd700;
+}
+
+.tagline{
+  margin-top:10px;
+  font-size:1.2rem;
+  color:#cfcfcf;
+}
+
+.banner{
+  width:92%;
+  max-width:850px;
+  margin-top:35px;
+  border-radius:25px;
+  border:2px solid rgba(255,255,255,0.2);
+  box-shadow:0 0 35px rgba(255,215,0,0.35);
+}
+
+.glass-card{
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(12px);
+  border-radius:22px;
+  box-shadow:0 0 25px rgba(0,255,255,0.15);
+}
+
+.intro-card{
+  max-width:700px;
+  margin:40px auto;
+  padding:30px;
+}
+
+.services{
+  padding:40px 20px 70px;
+}
+
+.services h2{
+  text-align:center;
+  margin-bottom:35px;
+  font-size:2rem;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.card{
+  background:#0d1328;
+  border:1px solid rgba(255,215,0,0.3);
+  border-radius:20px;
+  padding:28px;
+  transition:0.4s;
+  box-shadow:0 0 20px rgba(255,215,0,0.1);
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(0,255,255,0.45);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#ffd700;
+}
+
+.contact{
+  max-width:700px;
+  margin:40px auto 80px;
+  padding:35px 25px;
+  text-align:center;
+}
+
+.contact h2{
+  margin-bottom:20px;
+}
+
+.contact p{
+  margin:12px 0;
+}
+
+footer{
+  text-align:center;
+  padding:25px;
+  border-top:1px solid rgba(255,255,255,0.1);
+  color:#aaa;
+}
+
+.whatsapp-btn{
+  position:fixed;
+  bottom:25px;
+  right:20px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  padding:14px 22px;
+  border-radius:50px;
+  font-weight:600;
+  box-shadow:0 0 20px rgba(37,211,102,0.5);
+  z-index:999;
+  transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+  transform:scale(1.08);
+}
+
+@media(max-width:768px){
+
+  h1{
+    font-size:2.8rem;
+  }
+
+  .tagline{
+    font-size:1rem;
+  }
+
+  .banner{
+    width:100%;
+  }
+
+  .card{
+    padding:22px;
+  }
+
+}
